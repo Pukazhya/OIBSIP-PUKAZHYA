@@ -12,17 +12,17 @@
     <artifactId>TASK-1-OnlineReservation</artifactId>
     <packaging>jar</packaging>
 
-    <build>
-        <plugins>
-            <!-- allows running via mvn exec:java -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.3.0</version>
-                <configuration>
-                    <mainClass>com.pukazhya.oibsip.task1.Main</mainClass>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.3.0</version>
+            <configuration>
+                <mainClass>com.pukazhya.oibsip.task1.Main</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
 </project>
