@@ -741,23 +741,23 @@ class ReservationGUI {
         tfTo.setText("");
         tfTrainNo.setText((String) cbTrainSelect.getSelectedItem());
         cbClass.setSelectedIndex(0);
-        lblFare.setText("—");
-        lblPNR.setText("—");
+        lblFare.setText("-");
+        lblPNR.setText("-");
         spDate.setValue(Date.from(LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()));
     }
 
-    private void calculateFarePreview() {
-        try {
-            String trainNo = tfTrainNo.getText().trim();
-            String from = tfFrom.getText().trim();
-            String to = tfTo.getText().trim();
-            String cls = (String) cbClass.getSelectedItem();
-            double fare = service.estimateFare(trainNo, from, to, cls);
-            lblFare.setText("₹ " + new DecimalFormat("#,##0").format(fare));
-        } catch (Exception ex) {
-            lblFare.setText("—");
-        }
+  private void calculateFarePreview() {
+    try {
+        String trainNo = tfTrainNo.getText().trim();
+        String from = tfFrom.getText().trim();
+        String to = tfTo.getText().trim();
+        String cls = (String) cbClass.getSelectedItem();
+        double fare = service.estimateFare(trainNo, from, to, cls);
+        lblFare.setText("Rs. " + new DecimalFormat("#,##0").format(fare));
+    } catch (Exception ex) {
+        lblFare.setText("-");
     }
+}
 
     private void submitBooking() {
         String name = tfName.getText().trim();
@@ -794,7 +794,7 @@ class ReservationGUI {
                         r.getTrainName() + " (" + r.getTrainNo() + ")",
                         r.getClassType(),
                         r.getTravelDate().toString(),
-                        "₹" + (int)Math.round(r.getFare()),
+                        "Rs." + (int)Math.round(r.getFare()),
                         r.getStatus()
                 });
             }
