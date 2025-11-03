@@ -21,7 +21,7 @@
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.3.0</version>
         <configuration>
-          <mainClass>com.pukazhya.oibsip.task2numberguessing.Main</mainClass>
+        <mainClass>com.pukazhya.oibsip.task2.Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
