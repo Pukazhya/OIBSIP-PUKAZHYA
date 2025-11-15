@@ -30,7 +30,7 @@ public class Main {
 
     private static final Path STORAGE = Paths.get("accounts.dat");
 
-    private final JFrame frame = new JFrame("PUKAZHYA - ATM Interface (Task-3)");
+private final JFrame frame = new JFrame("PUKAZHYA - A𝚃M Interface (Task-3)");
     private final CardLayout cards = new CardLayout();
     private final JPanel root = new JPanel(cards);
 
